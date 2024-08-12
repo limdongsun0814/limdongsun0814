@@ -53,7 +53,7 @@ jobs:
           cat README.md
           sed '$ d' -i README.md
           cat README.md
-          cat date >>  README.md
+          date >>  README.md
           cat README.md
           git add .
           git config --global user.email "limdongsun0814@github.com"
