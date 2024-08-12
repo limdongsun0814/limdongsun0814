@@ -39,3 +39,22 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: repository checkout
+        uses: actions/checkout@v2
+        with:
+          repository: limdongsun0814
+          token: ${{ secrets.GH_TOKEN }}
+          path: infra-study
+      - name: Add date and push
+        run: |
+          ls
+          cd infra-study
+          ls
+          date >> data.txt
+          ls
+          git add .
+          git config --global user.email "limdongsun0814@github.com"
+          git config --global user.name "limdongsun"
+          git commit -am "github-action"
+          git push
