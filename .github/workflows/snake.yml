@@ -43,7 +43,7 @@ jobs:
       - name: repository checkout
         uses: actions/checkout@v2
         with:
-          repository: limdongsun0814
+          repository: limdongsun0814/limdongsun0814
           token: ${{ secrets.GH_TOKEN }}
           path: infra-study
       - name: Add date and push
