@@ -49,10 +49,11 @@ jobs:
       - name: Add date and push
         run: |
           ls
-          cd infra-study
-          ls
-          date >> data.txt
-          ls
+          cat README.md
+          sed '$ d' -i README.md
+          cat README.md
+          echo date >>  README.md
+          cat README.md
           git add .
           git config --global user.email "limdongsun0814@github.com"
           git config --global user.name "limdongsun"
