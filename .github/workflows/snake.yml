@@ -57,6 +57,6 @@ jobs:
           cat README.md
           git add .
           git config --global user.email "limdongsun0814@github.com"
-          git config --global user.name "limdongsun"
+          git config --global user.name "limdongsun0814"
           git commit -am "github-action"
           git push
