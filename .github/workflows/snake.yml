@@ -53,7 +53,7 @@ jobs:
           cat README.md
           sed '$ d' -i README.md
           cat README.md
-          date
+          date=date
           echo $date >>  README.md
           cat README.md
           git add .
