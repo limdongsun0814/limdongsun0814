@@ -19,7 +19,7 @@ jobs:
         run: |
           ls
           git config user.name limdongsun0814
-          git config user.email limdongsun0814@naver.com
+          git config user.email asme12@naver.com
           git add -A .
           git commit -m "generated"
           git push 
