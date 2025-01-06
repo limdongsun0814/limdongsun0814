@@ -17,6 +17,13 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
       - name: Commit & Push
         run: |
+          ls
+          cat README.md
+          sed '$ d' -i README.md
+          cat README.md
+          date >>  README.md
+          cat README.md
+          
           git config --global user.email "asme12@naver.com"
           git config --global user.name "limdongsun0814"
           git add -A .
