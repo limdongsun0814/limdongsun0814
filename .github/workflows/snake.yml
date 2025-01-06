@@ -29,7 +29,7 @@ jobs:
           git config --global user.email "asme12@naver.com"
           git config --global user.name "limdongsun0814"
           git add -A .
-          git commit -m "github-action"
+          git commit -m "github-action github-profile-3d-contrib"
           git push
           
   generate:
@@ -76,5 +76,5 @@ jobs:
           git add .
           git config --global user.email "asme12@naver.com"
           git config --global user.name "limdongsun0814"
-          git commit -am "github-action"
+          git commit -am "github-action snake"
           git push
