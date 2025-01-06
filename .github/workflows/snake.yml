@@ -14,15 +14,12 @@ on:
   # push:
   #  branches:
   #  - main
-    
-  
-
 jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     
-    steps:
+    steps:    
       # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
       - name: generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
@@ -48,6 +45,12 @@ jobs:
           repository: limdongsun0814/limdongsun0814
           token: ${{ secrets.GH_TOKEN }}
           path: infra-study
+
+      - uses: yoshi389111/github-profile-3d-contrib@0.6.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          
       - name: Add date and push
         run: |
           cd infra-study
