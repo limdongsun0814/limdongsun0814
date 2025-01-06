@@ -54,6 +54,7 @@ jobs:
       - name: Add date and push
         run: |
           cd infra-study
+          git pull
           ls
           cat README.md
           sed '$ d' -i README.md
