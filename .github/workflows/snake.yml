@@ -15,6 +15,23 @@ on:
   #  branches:
   #  - main
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: generate-github-profile-3d-contrib
+    steps:
+      - uses: actions/checkout@v3
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & Push
+        run: |
+          git config --global user.email "asme12@naver.com"
+          git config --global user.name "limdongsun0814"
+          git add -A .
+          git commit -m "github-action"
+          git push
+          
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -45,11 +62,6 @@ jobs:
           repository: limdongsun0814/limdongsun0814
           token: ${{ secrets.GH_TOKEN }}
           path: infra-study
-          
-      - uses: yoshi389111/github-profile-3d-contrib@0.6.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
           
       - name: Add date and push
         run: |
