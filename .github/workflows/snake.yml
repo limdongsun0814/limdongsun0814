@@ -43,16 +43,11 @@ jobs:
           repository: limdongsun0814/limdongsun0814
           token: ${{ secrets.GH_TOKEN }}
           path: infra-study
-          
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
+
           
       - name: Add date and push
         run: |
           cd infra-study
-          git pull
           ls
           cat README.md
           sed '$ d' -i README.md
