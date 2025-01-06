@@ -14,24 +14,7 @@ on:
   # push:
   #  branches:
   #  - main
-jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-  #   name: generate-github-profile-3d-contrib
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-  #         USERNAME: ${{ github.repository_owner }}
-  #     - name: Commit & Push
-  #       run: |
-  #         git config --global user.email "asme12@naver.com"
-  #         git config --global user.name "limdongsun0814"
-  #         git add -A .
-  #         git commit -m "github-action github-profile-3d-contrib"
-  #         git push
-          
+jobs:          
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -71,7 +54,6 @@ jobs:
       - name: Add date and push
         run: |
           cd infra-study
-          git pull
           ls
           cat README.md
           sed '$ d' -i README.md
