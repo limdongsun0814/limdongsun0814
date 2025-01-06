@@ -42,7 +42,7 @@
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=limdongsun0814&show_icons=true&theme=dracula)
 
-![snake gif](https://github.com/limdongsun0814/limdongsun0814/blob/output/github-contribution-grid-snake.svg)
+![](./profile-3d-contrib/profile-gitblock.svg)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=limdongsun0814&layout=compact&theme=dracula)
 
