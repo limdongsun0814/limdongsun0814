@@ -45,11 +45,6 @@ jobs:
           repository: limdongsun0814/limdongsun0814
           token: ${{ secrets.GH_TOKEN }}
           path: infra-study
-
-      - uses: yoshi389111/github-profile-3d-contrib@0.6.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
           
       - name: Add date and push
         run: |
